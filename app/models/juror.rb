@@ -1,0 +1,2 @@
+class Juror < ApplicationRecord
+end
