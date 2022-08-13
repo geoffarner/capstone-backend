@@ -1,0 +1,21 @@
+@jurors.map do |juror|
+  {
+    id: juror.id,
+    panel_number: juror.panel_number,
+    name: juror.name,
+    age: juror.age,
+    sex: juror.sex,
+    residence: juror.residence,
+    housing: juror.housing,
+    education: juror.education,
+    law_experience: juror.law_experience,
+    occupation: juror.occupation,
+    military_service: juror.military_service,
+    jury_relation: juror.jury_relation,
+    prior_jury: juror.prior_jury,
+    notes: juror.notes,
+    jury_pool: juror.jury_pool,
+    jury_box: juror.jury_box,
+    jury_alternate: juror.jury_alternate
+  }
+end
