@@ -19,13 +19,13 @@ class JurorsController < ApplicationController
       render :show
     else
       render json: { errors: @juror.errors.full_messages },
-      status: 401
+             status: 401
     end
   end
 
   def destroy
     juror = Juror.find_by(id: params[:id])
     juror.destroy
-    render json: { Juror Removed From Jury Pool }
+    render json: { message: "Juror Removed From Jury Pool." }
   end
 end
