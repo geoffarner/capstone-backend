@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  has_many :jurors
+
   def index
     users = User.all
     render json: users.as_json
