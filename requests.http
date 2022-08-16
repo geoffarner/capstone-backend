@@ -1,0 +1,51 @@
+### Users Index
+GET http://localhost:3000/users
+
+### Users Show
+GET http://localhost:3000/users/:id
+
+### Users Create
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "test name",
+  "email": "test@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Jurors Index
+GET http://localhost:3000/jurors
+
+### Jurors Show
+GET http://localhost:3000/jurors/:id
+
+### Jurors Update
+PATCH http://localhost:3000/jurors/:id
+Content-Type: application/json
+
+{
+  "jury_pool": false,
+  "jury_box": true,
+}
+
+### Jurors Destroy
+DELETE http://localhost:3000/jurors/:id
+
+### Jurors Create
+POST http://localhost:3000/jurors
+Content-Type: application/json
+
+{
+  "panel_number": 21,
+  "name": "test name",
+  "age": 45,
+  "sex": "male",
+  "residence": "test residence",
+  "housing": "test housing",
+  "education": "test eduction",
+  "law_experience": "none",
+  "occupation": "test occupation",
+  "military_experience": "none",
+}
