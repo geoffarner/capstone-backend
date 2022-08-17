@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get "/users" => "users#index"
   # user create
   post "/users" => "users#create"
+  # user show
+  get "/users/:id" => "users#show"
+  # user destroy
+  delete "/users/:id" => "users#destroy"
+  # user update
+  patch "/users/:id" => "users#update"
 
   ### Jurors ###
 
@@ -17,5 +23,5 @@ Rails.application.routes.draw do
   # jurors update
   patch "/jurors/:id" => "jurors#update"
   # juror create
-  post "/jurors" => "jurors#create"
+  post "/jurors/" => "jurors#create"
 end

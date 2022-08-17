@@ -1,9 +1,9 @@
 class JurorsController < ApplicationController
-  belongs_to :users
+  # belongs_to :users
 
   def index
-    @jurors = Juror.all
-    render :index
+    jurors = Juror.all
+    render json: jurors.as_json
   end
 
   def show

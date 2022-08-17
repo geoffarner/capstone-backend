@@ -1,5 +1,9 @@
 {
   id: @user.id,
+  council: @user.council,
+  name: @user.name,
+  email: @user.email,
+  password: @user.password,
   created_at: @user.created_at,
   updated_at: @user.updated_at
 }

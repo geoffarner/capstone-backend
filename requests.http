@@ -1,28 +1,38 @@
+###################### USERS ############################
 ### Users Index
-GET http://localhost:3000/users
+GET http://localhost:3000/users.json
 
 ### Users Show
-GET http://localhost:3000/users/:id
+GET http://localhost:3000/users/2.json
 
 ### Users Create
-POST http://localhost:3000/users
+POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
   "name": "test name",
   "email": "test@example.com",
   "password": "password",
-  "password_confirmation": "password"
+  "council": "defense"
 }
+### Users Destroy
+DELETE http://localhost:3000/users/3.json
 
+### Users Update
+PATCH http://localhost:3000/users/4.json
+Content-Type: application/json
+
+{ "council": "defense" }
+
+############################# JURORS ########################
 ### Jurors Index
-GET http://localhost:3000/jurors
+GET http://localhost:3000/jurors.json
 
 ### Jurors Show
-GET http://localhost:3000/jurors/:id
+GET http://localhost:3000/jurors/1.json
 
 ### Jurors Update
-PATCH http://localhost:3000/jurors/:id
+PATCH http://localhost:3000/jurors/21.json
 Content-Type: application/json
 
 {
@@ -31,10 +41,10 @@ Content-Type: application/json
 }
 
 ### Jurors Destroy
-DELETE http://localhost:3000/jurors/:id
+DELETE http://localhost:3000/jurors/21.json
 
 ### Jurors Create
-POST http://localhost:3000/jurors
+POST http://localhost:3000/jurors.json
 Content-Type: application/json
 
 {
@@ -48,4 +58,10 @@ Content-Type: application/json
   "law_experience": "none",
   "occupation": "test occupation",
   "military_experience": "none",
+  "jury_relation": "none",
+  "prior_jury": "none",
+  "notes": "notes test",
+  "jury_pool": true,
+  "jury_box": false,
+  "jury_alternative": false
 }
