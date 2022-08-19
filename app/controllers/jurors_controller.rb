@@ -2,8 +2,8 @@ class JurorsController < ApplicationController
   # belongs_to :users
 
   def index
-    jurors = Juror.all
-    render json: jurors.as_json
+    @jurors = Juror.all
+    render :index
   end
 
   def show
@@ -12,7 +12,7 @@ class JurorsController < ApplicationController
   end
 
   def create
-    @juror = Juror.new(
+    juror = Juror.new(
       panel_number: params[:panel_number],
       name: params[:name],
       age: params[:age],
