@@ -3,65 +3,76 @@
 GET http://localhost:3000/users.json
 
 ### Users Show
-GET http://localhost:3000/users/2.json
+GET http://localhost:3000/users/6.json
 
 ### Users Create
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "test name",
+  "name": "Amanda",
   "email": "test@example.com",
   "password": "password",
   "council": "defense"
 }
 ### Users Destroy
-DELETE http://localhost:3000/users/3.json
+DELETE http://localhost:3000/users/4.json
 
 ### Users Update
-PATCH http://localhost:3000/users/4.json
+PATCH http://localhost:3000/users/6.json
 Content-Type: application/json
 
-{ "council": "defense" }
+{ "council": "prosecution",
+  "name": "Albert Pujols",
+  "email": "ap@ex.com",
+  "password": "password1"
+ }
 
 ############################# JURORS ########################
 ### Jurors Index
 GET http://localhost:3000/jurors.json
 
 ### Jurors Show
-GET http://localhost:3000/jurors/1.json
+GET http://localhost:3000/jurors/28.json
 
 ### Jurors Update
-PATCH http://localhost:3000/jurors/21.json
+PATCH http://localhost:3000/jurors/26.json
 Content-Type: application/json
 
 {
+
+  "law_experience": false,
+  "military_service": true,
   "jury_pool": false,
-  "jury_box": true,
+  "jury_box": false,
+  "jury_alternate": false,
+  "jury_relation": false,
+  "education": "middle school"
 }
+ 
 
 ### Jurors Destroy
-DELETE http://localhost:3000/jurors/21.json
+DELETE http://localhost:3000/jurors/28.json
 
 ### Jurors Create
 POST http://localhost:3000/jurors.json
 Content-Type: application/json
 
 {
-  "panel_number": 21,
-  "name": "test name",
+  "panel_number": 25,
+  "name": "Amanda",
   "age": 45,
   "sex": "male",
   "residence": "test residence",
   "housing": "test housing",
-  "education": "test eduction",
-  "law_experience": "none",
+  "education": "test education",
+  "law_experience": false,
   "occupation": "test occupation",
-  "military_experience": "none",
+  "military_service": false,
   "jury_relation": "none",
   "prior_jury": "none",
   "notes": "notes test",
   "jury_pool": true,
   "jury_box": false,
-  "jury_alternative": false
+  "jury_alternate": false
 }
