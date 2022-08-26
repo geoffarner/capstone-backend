@@ -3,7 +3,7 @@
 GET http://localhost:3000/users.json
 
 ### Users Show
-GET http://localhost:3000/users/6.json
+GET http://localhost:3000/users/2.json
 
 ### Users Create
 POST http://localhost:3000/users.json
@@ -26,17 +26,27 @@ Content-Type: application/json
   "name": "Albert Pujols",
   "email": "ap@ex.com",
   "password": "password1"
- }
+  }
+ 
+### Sessions create (login)
+
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "bs@example.com",
+  "password": "password"
+}
 
 ############################# JURORS ########################
 ### Jurors Index
 GET http://localhost:3000/jurors.json
 
 ### Jurors Show
-GET http://localhost:3000/jurors/28.json
+GET http://localhost:3000/jurors/1.json
 
 ### Jurors Update
-PATCH http://localhost:3000/jurors/26.json
+PATCH http://localhost:3000/jurors/1.json
 Content-Type: application/json
 
 {

@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   # user update
   patch "/users/:id" => "users#update"
 
+  ### Session for Login/Logout ###
+  post "/sessions" => "sessions#create"
+
   ### Jurors ###
 
   # jurors index
