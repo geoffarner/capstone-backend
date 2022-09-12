@@ -10,7 +10,7 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Amanda",
+  "name": "Guest",
   "email": "test@example.com",
   "password": "password",
   "council": "defense"
